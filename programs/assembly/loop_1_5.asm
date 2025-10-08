@@ -1,0 +1,18 @@
+; Simple counting loop from 1 to 5
+
+LDI 1   ; Start with 1               00: (0000   0101 0001)
+OUT     ; Output current number      01: (0001   1110 0000)
+ADD 15  ; Add 1                      02: (0010   0001 1111)
+STA 14  ; Store new value            03: (0011   0100 1110)
+SUB 13  ; Subtract 6 (check if done) 04: (0100   0011 1101)
+JZ  8   ; If zero, we're done        05: (0101   1000 1000)
+LDA 14  ; Load current value         06: (0110   0001 1110)
+JMP 1   ; Continue loop              07: (0111   0110 0001)
+HLT     ; Halt                       08: (1000   1111 0000)
+        ;                            09: (1001            )
+        ;                            10: (1010            )
+        ;                            11: (1011            )
+        ;                            12: (1100            )
+        ; Constant 6                 13: (1101   0000 0110)
+        ; Current number             14: (1110   0000 0000)
+        ; Constant 1                 15: (1111   0000 0001)
