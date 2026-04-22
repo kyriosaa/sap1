@@ -25,27 +25,23 @@ The computer works without any code and can be manually programmed by using DIP 
 
 ## Core Components
 
-|  |  |
-| --- | --- |
-| <h3>**_CPU ARCHITECTURE_**</h3> | |
-| **Clock Module** | Controls the computer's clock speed |
-| **A Register (Accumulator)** | The main register that stores data for math operations |
-| **B Register** | The secondary register to hold the second operand for ALU operations |
-| **Instruction Register** | Stores the current instruction being executed |
-| **Memory Address Register (MAR)** | Holds the specific memory address being accessed in RAM |
-| **Arithmetic Logic Unit (ALU)** | Does the addition and subtraction |
-| **Flags Register** | Checks for overflow or underflow values |
-| **Program Counter** | Keeps track of which instruction to execute next |
-| **EEPROM Programmer** | For CPU microcode & display programming |
-| <br> <br> | |
-| <h3>**_MEMORY & I/O_**</h3> | |
-| **16-byte RAM** | Stores both the program instructions and data |
-| **4-bit address** | Can access 16 memory locations (can store either instructions or data) |
-| **7-segment display** | Decimal display for output |
-| **Clock control** | Includes a potentiometer for controlling clock speed along with the option to set the clock to automatic or manual |
-| **Reset button** | Includes a button to reset the computer and rerun any loaded programs |
-| **Control switches** | Includes DIP switches and buttons for manual programming |
-| | |
+### CPU Architecture
+- **A Register (Accumulator)** – The main register that stores data for math operations.
+- **B Register** – The secondary register to hold the second operand for ALU operations.
+- **Instruction Register** – Stores the current instruction being executed.
+- **Memory Address Register (MAR)** – Holds the specific memory address being accessed in RAM.
+- **Arithmetic Logic Unit (ALU)** – Does the addition and subtraction.
+- **Flags Register** – Checks for overflow or underflow values.
+- **Program Counter** – Keeps track of which instruction to execute next.
+- **EEPROM Programmer** – For CPU microcode & display programming.
+
+### Memory & I/O
+- **16-byte RAM** – Stores both the program instructions and data.
+- **4-bit Address** – Can access 16 memory locations (can store either instructions or data).
+- **7-Segment Display** – Decimal display for output.
+- **Clock Control** – Includes a potentiometer for controlling clock speed, along with the option to set the clock to automatic or manual.
+- **Reset Button** – Includes a button to reset the computer and rerun any loaded programs.
+- **Control Switches** – Includes DIP switches and buttons for manual programming.
 
 ## Instruction Set
 
@@ -68,10 +64,10 @@ For info on how to input the assembly program, look at [Programming](#programmin
 
 ## Operation Cycle
 
-1. **Fetch -** The program counter addresses memory, then instruction is loaded into the instruction register
-2. **Decode -** Control logic interprets the opcode to figure out which operation to perform
-3. **Execute -** The control signals are activated to do the instruction
-4. **Increment -** If there's no jump, the program counter advances to the next instruction
+1. **Fetch** - The program counter addresses memory, then instruction is loaded into the instruction register
+2. **Decode** - Control logic interprets the opcode to figure out which operation to perform
+3. **Execute** - The control signals are activated to do the instruction
+4. **Increment** - If there's no jump, the program counter advances to the next instruction
 
 ## Programming
 
@@ -100,10 +96,19 @@ Data storage (123):          0111 1011
 
 ## Images
 
-<img src='./images/sap1.JPG'>
-<img src='./images/control_word.JPG'>
-<img src='./images/eeproms.JPG'>
-<img src='./images/programmer2.JPG'>
-<img src='./images/display_side.JPG'>
-<img src='./images/ic.JPG'>
-<img src='./images/program_counter.JPG'>
+> Project overview
+> <img src='./images/sap1.JPG'>
+
+> Control word
+> <img src='./images/control_word.JPG'>
+
+> EEPROM
+> <img src='./images/eeproms.JPG'>
+
+> EEPROM programmer
+> <img src='./images/programmer2.JPG'>
+
+> Other photos
+> <img src='./images/display_side.JPG'>
+> <img src='./images/ic.JPG'>
+> <img src='./images/program_counter.JPG'>
